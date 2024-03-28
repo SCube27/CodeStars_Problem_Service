@@ -1,5 +1,5 @@
 function pingController(req, res) {
-    return res.json({message : "Working fine"});
+    return res.json({message : "Problem Controller is up!"});
 }
 
 function addProblem(req, res) {

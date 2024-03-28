@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.text());
 
+// Goes to the routes from where goes to the requested version
 app.use('/api', apiRouter);
 
 app.get('/ping', (req, res) => {
