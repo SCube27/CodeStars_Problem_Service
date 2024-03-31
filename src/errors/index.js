@@ -1,5 +1,6 @@
 module.exports = {
     BadGatewayError : require(`./badGateway.error`),
+    BadRequestError : require(`./badRequest.error`),
     ConflictError : require(`./conflict.error`),
     InternalServerError : require(`./internalServer.error`),
     NotFoundError : require(`./notFound.error`),

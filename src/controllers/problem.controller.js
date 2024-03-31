@@ -1,6 +1,4 @@
-const { StatusCodes } = require('http-status-codes');
-const NotImplementedError = require('../errors/notImplemented.error');
-const BadRequestError = require('../errors/badrequest.error');
+const { NotImplementedError } = require(`../errors/index`)
 
 function pingController(req, res, next) {
     return res.json({message : "Problem Controller is up!"});
