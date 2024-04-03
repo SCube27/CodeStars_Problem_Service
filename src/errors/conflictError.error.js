@@ -3,7 +3,7 @@ const BaseError = require("./base.error");
 
 class ConflictError extends BaseError {
     constructor(details) {
-        super(`ConflictError`, StatusCodes.CONFLICT, `Conflict present in request, please retry!`, details);
+        super(`ConflictError`, StatusCodes.CONFLICT, `Conflicts present in request please check and try again`, details);
     }
 }
 

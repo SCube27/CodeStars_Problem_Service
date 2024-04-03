@@ -1,11 +1,10 @@
 const { StatusCodes } = require("http-status-codes");
 const BaseError = require("./base.error");
 
-
-class BadGateway extends BaseError {
+class BadGatewayError extends BaseError {
     constructor(details) {
-        super(`BadGateway`, StatusCodes.BAD_GATEWAY, `Invalid response recieved on Gateway`, details);
+        super("BadGateway", StatusCodes.BAD_GATEWAY, "Invalid Response Recieved on the Gateway", details);
     }
 }
 
-module.exports = BadGateway;
+module.exports = BadGatewayError;
