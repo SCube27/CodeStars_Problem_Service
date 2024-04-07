@@ -21,6 +21,7 @@ class ProblemRepository {
         try {
             const problem = await Problem.findById(problemID);
             if(!problem) {
+                logger.error(`Problem Repository: Problem with id ${problemID} is not found in the DB`);
                 throw new NotFoundError('Problem', problemID);
             }
             return problem;
@@ -44,7 +45,7 @@ class ProblemRepository {
         try {
             const deletedProblem = await Problem.findByIdAndDelete(problemID);
             if(!deletedProblem) {
-                logger.error(`Problem with id ${problemID} is not found in the DB`);
+                logger.error(`Problem Repository: Problem with id ${problemID} is not found in the DB`);
                 throw new NotFoundError('Problem', problemID);
             }
             return deletedProblem;
@@ -62,6 +63,7 @@ class ProblemRepository {
                 testCases: updateData.testCases
             });
             if(!updatedProblem) {
+                logger.error(`Problem Repository: Problem with id ${problemID} is not found in the DB`);
                 throw new NotFoundError('Problem', problemID);
             }
         } catch (error) {
