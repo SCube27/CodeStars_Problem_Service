@@ -1,7 +1,7 @@
 {
   "name": "codestar_problem_service",
   "version": "1.0.0",
-  "description": "A problem setting microservie for the project",
+  "description": "A problem setting microservice for the project",
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon src/index.js",

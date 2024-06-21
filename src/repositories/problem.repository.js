@@ -9,6 +9,7 @@ class ProblemRepository {
                 title : problemData.title,
                 description : problemData.description,
                 testCases : (problemData.testCases) ? problemData.testCases : [],
+                codeStubs : problemData.codeStubs,
             });
             return problem;
         } catch (error) {
